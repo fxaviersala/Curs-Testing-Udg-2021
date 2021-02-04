@@ -7,6 +7,10 @@
   - xunit
   - Moq
   - FluentAssertions
+  
+Presentació:
+
+- [PDF](Dia1_Presentació.pdf)
 
 ## Exemples
 
@@ -69,8 +73,4 @@ Comprova que es poden posar vaques en un camió però sempre complint les mesure
 
 Directory: [day1-4](day1-4)
 
-## Material
 
-Presentació:
-
-- [PDF](Dia1_Presentació.pdf)
