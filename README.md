@@ -39,4 +39,6 @@ Les contrasenyes han de tenir:
 - Si no hi ha caràcter especial els números han de ser diferents
 - La contrasenya no pot ser el nom d’usuari, ni el nom de l’usuari al revés
 
-### A
+### Altres
+
+TODO
