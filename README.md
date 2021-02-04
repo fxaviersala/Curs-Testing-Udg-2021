@@ -58,9 +58,11 @@ Les característiques són:
 
 Directory: [day1-3](day1-3)
 
-### Camió de vaques
+### Transport de vaques
 
 Comprova que es poden posar vaques en un camió però sempre complint les mesures de seguretat:
+
+![Vaques](img/vaques.png)
 
 - El camió té un pes màxim que no s'ha de superar
 - La raça de la vaca determina la quantitat de llet que produirà
