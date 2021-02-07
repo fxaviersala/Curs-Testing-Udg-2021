@@ -2,8 +2,7 @@
 
 Condicions:
 
-- S’han de poder afegir i treure quantitats de productes i buidar la cistella
-- Ha de saber la quantitat d’articles
+- S’han de poder afegir i treure quantitats de productes, buidar la cistella i saber la quantitat d’articles que hi ha en la cistella
 - Calcula el preu del transport:
   - Hi haurà un preu de transport base per compres inferiors a 5Kg
   - El preu del transport s’incrementarà en 1€ per cada 5Kg de pes
