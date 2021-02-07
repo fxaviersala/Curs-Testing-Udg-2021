@@ -41,4 +41,4 @@ Les contrasenyes han de tenir:
 
 ### Altres
 
-TODO
+[Mes](https://codingdojo.org/kata/)
