@@ -74,6 +74,11 @@ namespace shopcart
         /// <param name="product">Producte que s'afegeix</param>
         public void AddProduct(int count, IProduct product)
         {
+            if (product == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             if (products.ContainsKey(product))
             {
                 var quantity = products[product] + count;
@@ -92,6 +97,11 @@ namespace shopcart
         /// <param name="product"></param>
         public void RemoveProduct(int count, string product)
         {
+            if (product == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             var key = products.Keys.FirstOrDefault(n => n.Nom == product);
 
             if (key == null)
