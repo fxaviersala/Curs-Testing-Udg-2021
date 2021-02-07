@@ -4,13 +4,13 @@ namespace shopcart.Interfaces
 {
     public interface IShoppingCart
     {
-        void AddProduct(int count, IProduct product);
-        void RemoveProduct(int count, string product);
         int GetItemsCount();
         List<IProduct> Items();
         bool IsEmpty();
-        void Clear();
-
+        void EmptyShoppingCart();
+        void AddProduct(int count, IProduct product);
+        void RemoveProduct(int count, string product);
+        
         double GetTotal();
         double TransportPrice { get; }
         
