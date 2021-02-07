@@ -19,10 +19,10 @@ namespace shopcart
         /// </summary>
         /// <param name="transportPrice">Preu base del transport</param>
         /// <param name="usuari">usuari</param>
-        public ShoppingCart(double transport, IUsuari usuari = null)
+        public ShoppingCart(double preuTransportBase, IUsuari usuari = null)
         {
             products = new Dictionary<IProduct, int>();
-            _baseTransportPrice = transport;
+            _baseTransportPrice = preuTransportBase;
             if (usuari != null) {
                 _usuari = usuari;
             }
@@ -201,11 +201,7 @@ namespace shopcart
         }
 
         #endregion
-
-        public override string ToString() {
-            var (pes, preu) = CalculaPesIPreu();
-            return $"{string.Format("{0:0.##}",preu)} + {TransportPrice} euros, {pes} kg";
-        }
+    
 
         #region usuari
         /// <summary>
@@ -229,7 +225,11 @@ namespace shopcart
 
         #endregion
 
-
+        public override string ToString()
+        {
+            var (pes, preu) = CalculaPesIPreu();
+            return $"{string.Format("{0:0.##}", preu)} + {TransportPrice} euros, {pes} kg";
+        }
     }
 
 }
