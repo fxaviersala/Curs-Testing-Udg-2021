@@ -8,7 +8,7 @@ namespace shopcart
     public class ShoppingCart : IShoppingCart
     {
         private Dictionary<IProduct, int> products;
-        private  readonly double _baseTransportPrice;
+        private readonly double _baseTransportPrice;
 
         private double pesBasePerDefecte = 5;
 
@@ -23,7 +23,8 @@ namespace shopcart
         {
             products = new Dictionary<IProduct, int>();
             _baseTransportPrice = preuTransportBase;
-            if (usuari != null) {
+            if (usuari != null)
+            {
                 _usuari = usuari;
             }
         }
@@ -89,7 +90,7 @@ namespace shopcart
                 products[product] = count;
             }
         }
-        
+
         /// <summary>
         /// Treure un article de la cistella
         /// </summary>
@@ -128,7 +129,7 @@ namespace shopcart
 
         #endregion
 
-        #region Calcula
+        #region CalculaTotal
 
         /// <summary>
         /// Calcula el total a pagar segons les condicions de la cistella
@@ -145,27 +146,32 @@ namespace shopcart
             return total + CalculateTransport(pes, total);
         }
 
+        #endregion
 
         /// <summary>
         /// Calcula el pes i el preu de venda dels productes de la cistella
         /// </summary>
         /// <returns></returns>
-        private (double , double) CalculaPesIPreu() {
+        private (double, double) CalculaPesIPreu()
+        {
             var pes = 0.0;
             var total = 0.0;
-           foreach (var product in products)
-           {
-               var descompte = 0.0;
-               var quantitat = product.Value;
-               
-               pes += quantitat * product.Key.Pes;
-               if (quantitat >= 4) {
-                   descompte = quantitat * (product.Key.Preu * 5 / 100);
-               }
-               total += quantitat * product.Key.Preu - descompte;
-           }
-           return (pes, Math.Round(total, 2));
+            foreach (var product in products)
+            {
+                var descompte = 0.0;
+                var quantitat = product.Value;
+
+                pes += quantitat * product.Key.Pes;
+                if (quantitat >= 4)
+                {
+                    descompte = quantitat * (product.Key.Preu * 5 / 100);
+                }
+                total += quantitat * product.Key.Preu - descompte;
+            }
+            return (pes, Math.Round(total, 2));
         }
+
+        #region CalculaTransport
 
         /// <summary>
         /// Calcula el transport dels productes de la cistella
@@ -173,15 +179,17 @@ namespace shopcart
         /// <param name="pes">Pes dels productes de la cistella</param>
         /// <param name="preu">Preu dels productes de la cistella</param>
         /// <returns></returns>
-        private double CalculateTransport(double pes, double preu) 
+        private double CalculateTransport(double pes, double preu)
         {
             if (preu >= 50
-                || _usuari != null && _usuari.EsVIP()) {
+                || _usuari != null && _usuari.EsVIP())
+            {
                 return 0;
             }
 
-            if (pes >= pesBasePerDefecte ) {
-                var afegir = Math.Round((pes + pesBasePerDefecte)/pesBasePerDefecte) - 1;
+            if (pes >= pesBasePerDefecte)
+            {
+                var afegir = Math.Round((pes + pesBasePerDefecte) / pesBasePerDefecte) - 1;
                 return _baseTransportPrice + afegir;
             }
 
@@ -201,7 +209,7 @@ namespace shopcart
         }
 
         #endregion
-    
+
 
         #region usuari
         /// <summary>
@@ -216,9 +224,12 @@ namespace shopcart
         /// <param name="usuari"></param>
         public void AddUsuari(IUsuari usuari)
         {
-            if (_usuari == null) {
+            if (_usuari == null)
+            {
                 _usuari = usuari;
-            } else {
+            }
+            else
+            {
                 throw new Exception("Aquesta cistella ja pertany a un usuari");
             }
         }
