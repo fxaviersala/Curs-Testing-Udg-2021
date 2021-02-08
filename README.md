@@ -24,7 +24,7 @@ Cistella de la compra:
 * Ha de calcular el total a pagar amb transport inclòs
   * Si es compren més de quatre unitats del mateix producte es rebaixa un 5% en el preu del producte
 
-### El Saludador automàtic
+### TDD: El Saludador automàtic
 
 s'ha detectat que les persones cada dia són menys amables amb la gent que els envolta. Per això una startup vol desenvolupar un programa que saludi:
 
@@ -38,7 +38,7 @@ s'ha detectat que les persones cada dia són menys amables amb la gent que els e
   - De 21:00 a 06:00 ha de dir "Bona nit"
 - Si el nom té més de dues paraules ha d'afegir "Senyor"
 
-### Validador de contrasenyes
+### TDD: Validador de contrasenyes
 
 Escriure un validador de contrasenyes que tingui les característiques següents:
 
@@ -55,4 +55,4 @@ Les contrasenyes han de tenir:
 
 ### Altres
 
-[Mes](https://codingdojo.org/kata/)
+[Més exemples de TDD Katas](https://codingdojo.org/kata/)
