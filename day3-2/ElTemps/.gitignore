@@ -1,0 +1,6 @@
+bin/
+obj/
+.vscode/
+Migrations/
+node_modules/
+
