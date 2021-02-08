@@ -11,6 +11,19 @@ Presentació:
 
 ## Exemples
 
+### Cobertura i repàs
+
+Cistella de la compra:
+
+* S’han de poder afegir i treure quantitats de productes, buidar la cistella i saber la quantitat d’articles que hi ha en la cistella
+* Calcula el preu del transport:
+  * Hi haurà un preu de transport base per compres inferiors a 5Kg
+  * El preu del transport s’incrementarà en 1€ per cada 5Kg de pes
+  * Si el total és superior a 50€ el transport és gratuït
+  * Els usuaris VIP tenen transport gratuït
+* Ha de calcular el total a pagar amb transport inclòs
+  * Si es compren més de quatre unitats del mateix producte es rebaixa un 5% en el preu del producte
+
 ### El Saludador automàtic
 
 s'ha detectat que les persones cada dia són menys amables amb la gent que els envolta. Per això una startup vol desenvolupar un programa que saludi:
