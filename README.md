@@ -13,6 +13,8 @@ Presentació:
 
 ### Cobertura i repàs
 
+![cistella](img/cistella.png)
+
 Cistella de la compra:
 
 * S’han de poder afegir i treure quantitats de productes, buidar la cistella i saber la quantitat d’articles que hi ha en la cistella
