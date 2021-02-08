@@ -2,6 +2,7 @@
 
 ## Dia 2
 
+- Cobertura de codi
 - Introducció a Test Drive Development (TDD)
 
 Presentació:
