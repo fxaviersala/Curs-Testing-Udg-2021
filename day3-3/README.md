@@ -2,37 +2,21 @@
 
 Projecte per fer tests d'UI de la web de vaques en C#.
 
-Encara que no ho diu (encara) el camió pot portar com a màxim 1000 kg.
+Es pot iniciar amb `docker-compose`
+
+```bash
+docker-compose up
+```
 
 ![vaques](img/vaques.gif)
 
-Fa servir:
+## Què provar?
 
-- Selenium
-- Google Chrome
+Encara que no ho diu (encara) el camió pot portar com a màxim 1000 kg.
 
-## Clonar
-
-Per clonar el projecte s'han de descarregar els mòduls. La forma més senzilla és executar:
-
-```bash
-git clone --recurse-submodules https://github.com/CursEines/VaquesUITests.git
-```
-
-## Tests
-
-Per executar els tests n'hi ha prou amb `dotnet test`.
-
-```bash
-$ dotnet test
-...
-Test Run Successful.
-Total tests: 7
-     Passed: 7
- Total time: 26,2306 Seconds
-```
-
-Els tests que fa són relativament senzills.
-
-- Obre el navegdor i comprova que clicant a sobre d'una de les vaques es mou entre les columnes.
-- Comprova que el valor del número de viatges s'incrementa
+- Comprova que es poden posar vaques al camió
+- Comprova que no es poden posar més de 1000 kg en el camió
+- Comprova que es poden treure vaques del camió
+- Comprova que es poden enviar les vaques a la ciutat
+- Comprova que els valors de la barra canvien
+- ...
